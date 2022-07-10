@@ -1,4 +1,4 @@
-package vizrest
+package vizmse
 
 import "encoding/xml"
 
