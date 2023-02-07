@@ -1,0 +1,47 @@
+<service xmlns="http://www.w3.org/2007/app" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:viz="http://www.vizrt.com/atom">
+    <workspace>
+        <atom:title>Vizrt MSE</atom:title>
+        <collection href="http://127.0.0.1:8580/profiles">
+            <atom:title>MSE profile collection</atom:title>
+            <categories>
+                <atom:category term="profile" scheme="http://www.vizrt.com/types"/>
+            </categories>
+        </collection>
+        <collection href="http://127.0.0.1:8580/directory/">
+            <atom:title>MSE directory collection</atom:title>
+            <categories>
+                <atom:category term="directory" scheme="http://www.vizrt.com/types"/>
+            </categories>
+        </collection>
+        <collection href="http://127.0.0.1:8580/default-templates">
+            <atom:title>MSE default-templates collection</atom:title>
+            <categories>
+                <atom:category term="default-templates" scheme="http://www.vizrt.com/types"/>
+            </categories>
+        </collection>
+        <collection href="http://127.0.0.1:8580/settings">
+            <atom:title>MSE settings collection</atom:title>
+            <categories>
+                <atom:category term="settings" scheme="http://www.vizrt.com/types"/>
+            </categories>
+        </collection>
+        <collection href="http://127.0.0.1:8580/actions">
+            <atom:title>MSE actions collection</atom:title>
+            <categories>
+                <atom:category term="actions" scheme="http://www.vizrt.com/types"/>
+            </categories>
+        </collection>
+        <collection href="http://127.0.0.1:8580/webapps">
+            <atom:title>MSE hosted application collection</atom:title>
+            <categories>
+                <atom:category term="webapp" scheme="http://www.vizrt.com/types"/>
+            </categories>
+        </collection>
+        <collection href="http://127.0.0.1:8580/element_schedules">
+            <atom:title>MSE element-schedule collection</atom:title>
+            <categories>
+                <atom:category term="element_schedules" scheme="http://www.vizrt.com/types"/>
+            </categories>
+        </collection>
+    </workspace>
+</service>

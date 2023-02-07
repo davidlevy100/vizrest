@@ -1,5 +1,3 @@
-module github.com/youcoulddoworse/vizrest
+module github.com/davidlevy100/vizrest
 
-go 1.18
-
-require github.com/gorilla/mux v1.8.0
+go 1.20

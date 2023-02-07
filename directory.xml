@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="http://127.0.0.1:8580/directory/">
+    <id>urn:uuid:d55d5067-fc67-4ebb-b829-0c9ceacada4e</id>
+    <title>Directory feed for http://127.0.0.1:8580/directory/</title>
+    <updated>2023-02-06T21:58:06Z</updated>
+    <link href="http://127.0.0.1:8580/directory/" rel="self" type="application/atom+xml;type=feed"/>
+    <entry xmlns="http://www.w3.org/2005/Atom" xmlns:viz="http://www.vizrt.com/atom">
+        <category term="directory" scheme="http://www.vizrt.com/types"/>
+        <title>shows</title>
+        <author>
+            <name>Media Sequencer</name>
+        </author>
+        <updated>2023-02-06T21:57:40Z</updated>
+        <id>urn:uuid:36d779fc-f391-4ca9-8e6b-9809b6dea42c</id>
+        <summary>Directory shows</summary>
+        <link href="http://127.0.0.1:8580/directory/shows/" rel="alternate" type="application/atom+xml;type=feed"/>
+        <link href="http://127.0.0.1:8580/directory/shows" rel="self" type="application/atom+xml;type=entry"/>
+        <link href="http://127.0.0.1:8580/directory/shows" rel="edit" type="application/atom+xml;type=entry"/>
+        <viz:empty>false</viz:empty>
+    </entry>
+</feed>

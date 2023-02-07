@@ -1,41 +1,19 @@
 package main
 
-import (
-	"encoding/json"
-	"log"
-	"net/http"
-
-	"github.com/gorilla/mux"
-	"github.com/youcoulddoworse/vizrest/vizmse"
-)
-
-var client = vizmse.CreateClient()
+import "fmt"
 
 func main() {
 
-	r := mux.NewRouter()
-	r.HandleFunc("/", HomeHandler)
+	c := CreateClient()
 
-	http.ListenAndServe(":3000", r)
-	log.Println("Listening on :3000")
-	log.Fatal(http.ListenAndServe(":3000", nil))
+	m, err := GetBase(c, "http://127.0.0.1:8580")
 
-}
-
-func HomeHandler(w http.ResponseWriter, r *http.Request) {
-
-	s, err := vizmse.GetBase(client, "http://127.0.0.1:8580")
-	if err != nil {
-		log.Println(err)
-		return
+	if err == nil {
+		for key, val := range m {
+			fmt.Println(key, val)
+		}
+	} else {
+		fmt.Println(err)
 	}
-
-	payload, err := json.Marshal(s)
-	if err != nil {
-		log.Println(err)
-	}
-
-	w.Header().Set("Content-Type", "application/json")
-	w.Write(payload)
 
 }

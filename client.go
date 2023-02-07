@@ -1,8 +1,8 @@
-package vizmse
+package main
 
 import (
 	"encoding/xml"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"time"
 )
@@ -35,7 +35,7 @@ func Get(client *http.Client, url string) ([]byte, error) {
 
 	defer res.Body.Close()
 
-	body, err := ioutil.ReadAll(res.Body)
+	body, err := io.ReadAll(res.Body)
 	if err != nil {
 		return nil, err
 	}
@@ -61,7 +61,6 @@ func GetBase(client *http.Client, url string) (map[string]string, error) {
 
 	for _, thisElement := range s.Workspace.Collection {
 		result[thisElement.Categories.Category.Term] = thisElement.Href
-
 	}
 
 	return result, nil
